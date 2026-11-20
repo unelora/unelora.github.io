@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UNELORA — Made for one.</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--ivory:#F7F2EA;
+--paper:#FBF8F3;
+--beige:#E9DFD1;
+--taupe:#7A6D63;
+--ink:#4A413B;
+--champagne:#BFA57A;
+--champagne-soft:#D9C7A5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+background:var(--ivory);
+color:var(--ink);
+font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+line-height:1.9;
+-webkit-font-smoothing:antialiased;
+}
+.en{font-family:"Cormorant Garamond","Times New Roman",serif}
+section{padding:96px 28px;max-width:560px;margin:0 auto;text-align:center}
+.ib{display:inline-block}
+.rule{width:40px;height:1px;background:var(--champagne);margin:36px auto;opacity:.8}
+.eyebrow{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--champagne)}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 28px;position:relative}
+.star{width:26px;height:26px;color:var(--champagne);margin-bottom:28px;animation:glow 4s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1)}}
+.logo{font-size:44px;font-weight:300;letter-spacing:.34em;margin-right:-.34em;color:var(--ink)}
+.tagline{margin-top:14px;font-size:19px;font-style:italic;font-weight:300;color:var(--taupe);letter-spacing:.06em}
+.scroll{position:absolute;bottom:34px;font-size:10px;letter-spacing:.4em;color:var(--taupe);opacity:.7}
+.scroll::after{content:"";display:block;width:1px;height:34px;background:var(--champagne);margin:12px auto 0;animation:drop 2.4s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.customer .big{font-size:25px;font-weight:300;letter-spacing:.08em;line-height:1.5}
+.customer p{margin-top:22px;font-size:14.5px;color:var(--taupe)}
+.count{display:inline-block;margin-top:30px;border:1px solid var(--champagne-soft);padding:10px 22px;font-size:13px;letter-spacing:.3em;color:var(--taupe)}
+.concept p{font-size:15px;margin-top:18px}
+.rules ol{list-style:none;margin-top:34px;text-align:left;border-top:1px solid var(--beige)}
+.rules li{display:flex;gap:20px;align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--beige);font-size:14.5px}
+.rules li .n{font-size:15px;color:var(--champagne);min-width:26px}
+.collection{background:var(--paper);max-width:none;border-top:1px solid var(--beige);border-bottom:1px solid var(--beige)}
+.collection .inner{max-width:520px;margin:0 auto}
+.ctitle{font-size:34px;font-weight:300;letter-spacing:.24em;margin-right:-.24em;margin-top:14px}
+.serial{margin-top:10px;font-size:17px;letter-spacing:.3em;color:var(--champagne)}
+.box{width:180px;height:120px;margin:44px auto 10px;position:relative;perspective:600px}
+.box .lid,.box .body{position:absolute;left:0;right:0;border:1px solid var(--champagne-soft);background:linear-gradient(160deg,#EFE5D6,#E3D5C1)}
+.box .body{bottom:0;height:78px}
+.box .lid{top:6px;height:40px;transform-origin:bottom;animation:peek 6s ease-in-out infinite;display:flex;align-items:center;justify-content:center}
+.box .lid span{font-size:10px;letter-spacing:.32em;color:var(--taupe)}
+@keyframes peek{0%,70%,100%{transform:rotateX(0)}80%,90%{transform:rotateX(-14deg)}}
+.box .light{position:absolute;left:50%;top:44px;width:120px;height:20px;margin-left:-60px;background:radial-gradient(ellipse,rgba(217,199,165,.9),transparent 70%);opacity:0;animation:light 6s ease-in-out infinite}
+@keyframes light{0%,72%,100%{opacity:0}82%,88%{opacity:1}}
+.collection p.desc{font-size:14.5px;margin-top:26px}
+.arrival{margin-top:38px}
+.arrival .label{font-size:11px;letter-spacing:.4em;color:var(--taupe)}
+.arrival .date{margin-top:8px;font-size:24px;letter-spacing:.14em;font-weight:300}
+.cd[hidden]{display:none!important}
+.cd{display:flex;justify-content:center;gap:22px;margin-top:18px}
+.cd div{min-width:52px}
+.cd b{display:block;font-size:30px;font-weight:300;font-family:"Cormorant Garamond",serif}
+.cd small{font-size:9.5px;letter-spacing:.3em;color:var(--taupe)}
+.index table{width:100%;margin-top:30px;border-collapse:collapse;font-size:14px}
+.index td{padding:15px 4px;border-bottom:1px solid var(--beige);text-align:left}
+.index td.no{color:var(--champagne);width:52px;letter-spacing:.1em}
+.index td.st{text-align:right;font-size:11px;letter-spacing:.24em;color:var(--taupe)}
+.index tr.empty td{color:#B7ADA3}
+footer{text-align:center;padding:80px 28px 64px;color:var(--taupe)}
+footer .logo{font-size:20px;letter-spacing:.4em}
+footer p{margin-top:12px;font-size:11px;letter-spacing:.3em}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 1.2s ease,transform 1.2s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0c.6 6.2 5.8 11.4 12 12-6.2.6-11.4 5.8-12 12-.6-6.2-5.8-11.4-12-12C6.2 11.4 11.4 6.2 12 0z"/></svg>
+<h1 class="logo en">UNELORA</h1>
+<div class="tagline en">Made for one.</div>
+<div class="scroll en">SCROLL</div>
+</header>
+<section class="customer reveal">
+<div class="eyebrow en">Our Customer</div>
+<div class="rule"></div>
+<div class="big"><span class="ib">このブランドの顧客は、</span><span class="ib">世界でひとりだけ。</span></div>
+<p><span class="ib">流行のためでも、</span><span class="ib">誰かに見せるためでもなく、</span><br><span class="ib">ふたりだけが意味を知っているものを。</span></p>
+<div class="count en">CUSTOMER No. 001</div>
+</section>
+<section class="concept reveal">
+<div class="eyebrow en">Concept</div>
+<div class="rule"></div>
+<p><span class="en" style="font-size:17px;letter-spacing:.12em">UNE</span> ── ひとり。<br><span class="en" style="font-size:17px;letter-spacing:.12em">AURORA</span> ── 夜明けの光。</p>
+<p>たった一人のために生まれる光。</p>
+<p><span class="ib">大切な時間や記念日を、</span><span class="ib">その瞬間だけの思い出で終わらせず、</span><span class="ib">これからも身につけ、</span><span class="ib">残していける「かたち」に。</span></p>
+</section>
+<section class="rules reveal">
+<div class="eyebrow en">House Rules</div>
+<ol>
+<li><span class="n en">I.</span><span>顧客は、ひとりだけ。</span></li>
+<li><span class="n en">II.</span><span>同じものは、二度と作らない。</span></li>
+<li><span class="n en">III.</span><span><span class="ib">ふたりにしか分からない意味を、</span><span class="ib">ひとつ入れる。</span></span></li>
+<li><span class="n en">IV.</span><span>すべての作品に、シリアル番号を。</span></li>
+</ol>
+</section>
+<section class="collection reveal">
+<div class="inner">
+<div class="eyebrow en">Collection 001</div>
+<div class="ctitle en">THE ARCHIVE</div>
+<div class="serial en">001 / 001</div>
+<div class="box" aria-hidden="true">
+<div class="body"></div><div class="light"></div>
+<div class="lid"><span class="en">UNELORA</span></div>
+</div>
+<p class="desc"><span class="ib">最初のコレクションは、</span><span class="ib">これから贈るものと思い出を、</span><span class="ib">すべて受け止める場所。</span></p>
+<div class="arrival">
+<div class="label en">ARRIVING</div>
+<div class="date en" id="date">Coming soon</div>
+<div class="cd en" id="cd" hidden>
+<div><b id="d">0</b><small>DAYS</small></div>
+<div><b id="h">0</b><small>HOURS</small></div>
+<div><b id="m">0</b><small>MIN</small></div>
+</div>
+</div>
+</div>
+</section>
+<section class="index reveal">
+<div class="eyebrow en">The Archive Index</div>
+<table>
+<tr><td class="no en">001</td><td class="en">THE ARCHIVE</td><td class="st en" id="st1">IN THE MAKING</td></tr>
+<tr class="empty"><td class="no en">002</td><td>──</td><td class="st en">SOMEDAY</td></tr>
+<tr class="empty"><td class="no en">003</td><td>──</td><td class="st en">SOMEDAY</td></tr>
+</table>
+</section>
+<footer>
+<div class="logo en">UNELORA</div>
+<p class="en" id="est">EST. 2026.12.19</p>
+</footer>
+<script>
+const CONFIG = {
+arrival: null,
+delivered: false,
+established: "2026.12.19"
+};
+document.getElementById("est").textContent = "EST. " + CONFIG.established;
+if (CONFIG.delivered) {
+document.getElementById("date").textContent = "Delivered";
+document.getElementById("st1").textContent = "ARCHIVED";
+} else if (CONFIG.arrival) {
+const target = new Date(CONFIG.arrival);
+const p = n => String(n).padStart(2, "0");
+document.getElementById("date").textContent =
+target.getFullYear() + "." + p(target.getMonth() + 1) + "." + p(target.getDate());
+const cd = document.getElementById("cd");
+cd.hidden = false;
+const tick = () => {
+const ms = target - new Date();
+if (ms <= 0) { cd.hidden = true; document.getElementById("date").textContent = "Today."; return; }
+document.getElementById("d").textContent = Math.floor(ms / 864e5);
+document.getElementById("h").textContent = Math.floor(ms / 36e5) % 24;
+document.getElementById("m").textContent = Math.floor(ms / 6e4) % 60;
+};
+tick(); setInterval(tick, 30000);
+}
+const io = new IntersectionObserver(es => es.forEach(e => {
+if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); }
+}), { threshold: .2 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
